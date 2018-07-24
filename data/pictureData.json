@@ -1,0 +1,256 @@
+{
+  "galleries": [
+    {
+      "title": "Motor Sport",
+      "description": "Racing Cars",
+      "pictures": [
+        {
+          "imageFile": "speedDemons",
+          "fileSizes": {
+            "th": 1,
+            "reg": 1,
+            "lg": 0
+          },
+          "title": "Speed demons of 1904",
+          "subTitle": "A Motor Race on the Continent in the Early Days",
+          "medium": "Tempera",
+          "description": "Early race cars, gypsy caravans and a windmill.",
+          "relatedPictures": [
+            {
+              "imageFile": "johnnyWalker",
+              "fileSizes": {
+                "th": 1,
+                "reg": 1,
+                "lg": 0
+              },
+              "title": "\"Champion\" -- Johnny Walker Ad",
+              "description": "This advertisement for Johnny Walker shows the painting \"Speed Demons of 1904\" in the background. Also note the easel and a piece of furniture which appear in \"Artist in Studio\"."
+            }
+          ],
+          "th": "1",
+          "reg": "1",
+          "lg": "0"
+        },
+        {
+          "imageFile": "parisToMadrid",
+          "fileSizes": {
+            "th": 1,
+            "reg": 1,
+            "lg": 0
+          },
+          "title": "Paris to Madrid",
+          "medium": "Tempera or Casein on Illustration Board",
+          "description": "This was part of the series that Helck did for Esquire magazine in 1944."
+        },
+        {
+          "imageFile": "robertsonComesThrough",
+          "fileSizes": {
+            "th": 1,
+            "reg": 1,
+            "lg": 0
+          },
+          "title": "Esquire Series 1944 - 1945",
+          "medium": "",
+          "description": "<div class=\"multiLine\"> <p>A turning point in Helck's career came when  Esquire asked him to contribute to their series, \"Great Moments in American Sport.\" In his memoir he says,</p> <div class=\"blockQuote\">They had me down for Bobby Jones, Babe Ruth or Man of War. I countered with the Vanderbilt Cup [a race that ran in Long Island, NY and that had captivated Helck as a child]. \"But that's a Bridge tournament\" was the Editor's rejoinder. It took a carefully-done sketch (on speculation) to convince Editor [Bernard] Geis that the first U. S. victory in classic auto racing, Robertson's and the Loco's win in the 1908 Vanderbilt, was indeed a great moment in American Sport.</div> <p>Helck inspired Editor Geis to commision a series of eight paintings devoted to great moments in American motor sports. The first painting appeared in the December 1944 issue of <i>Esquire</i> and the final one in November 1946. This series proved the existence of an audience for automotive art and established Helck as its foremost practitioner. Although he continued to do advertising work for major commercial campaigns (Chevy Truck, National Steel, General Electric) well into the 1950's, during this period more and more of his output became devoted to illustrations of automotive history, either for magazine articles or commissioned by private collectors.</p> </div>",
+          "th": "1",
+          "reg": "1",
+          "lg": "0",
+          "notTheFirstTime": "robertsonComesThrough",
+          "pictures": [
+            {
+              "imageFile": "robertsonComesThrough",
+              "fileSizes": {
+                "th": 1,
+                "reg": 1,
+                "lg": 0
+              },
+              "title": " Robertson Comes Through",
+              "medium": "Gouache or Casein on Illustration Board <br />26\" x 37.5\"<br />1944",
+              "description": "George Robertson drives \"Old 16\", the 120 HP Locomobile, to become the first American winner of the Vanderbilt Cup Race in 1908.",
+              "th": "1",
+              "reg": "1",
+              "lg": "0"
+            },
+            {
+              "imageFile": "gallantDefeat",
+              "fileSizes": {
+                "th": 1,
+                "reg": 1,
+                "lg": 0
+              },
+              "title": "De Palma Pushes his Mercedes Home",
+              "medium": "Gouache or Casein on Illustration Board<br />1944",
+              "description": "<p>Ralph De Palma draws a cheer from the Indianapolis crowd, as he pushes his disabled car after leading the 1912 race for 197 laps. </p>  <p>This painting appeared in the July 1945 issue of <i>Esquire</i> with an accompanying article by Capt. Eddie Rickenbacker, who had witnessed the event and described the crowds reaction: <div class=\"blockQuote\">\"Eighty thousand people were there; they saw the sweat on his face, they knew what was going on in his mind. They roared out a cheer that has never again been heard at Indianapolis. You have to fail in a peculiar and wonderful way to earn such a cheer.\"</div> ",
+              "th": "1",
+              "reg": "1",
+              "lg": "0"
+            },
+            {
+              "imageFile": "countyFair",
+              "fileSizes": {
+                "th": 1,
+                "reg": 1,
+                "lg": 0
+              },
+              "title": "Gangway for Barney Oldfield",
+              "medium": "Gouache or Casein on Illustration Board<br />1945",
+              "description": "The favorite of the early dirt track's is towed into a 1904 fair grounds in his record-breaking racer, the Peerless Green Dragon.",
+              "notTheFirstTime": "countyFair",
+              "th": "1",
+              "reg": "1",
+              "lg": "0"
+            }
+            
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cityscapes",
+      "description": "Cities, Buildings and Bridges",
+      "pictures": [
+        {
+          "imageFile": "elevatedStation",
+          "fileSizes": {
+            "th": 1,
+            "reg": 1,
+            "lg": 0
+          },
+          "title": "66th Street Elevated Station",
+          "medium": "Oil on Canvas",
+          "description": "The old Elevated Station on 66th St. in Manhattan.",
+          "relatedPictures": [
+            {
+              "imageFile": "elevatedStationPhoto1",
+              "fileSizes": {
+                "th": 1,
+                "reg": 1,
+                "lg": 0
+              },
+              "medium": "Photograph",
+              "title": "66th Street Elevated Station, Street Level",
+              "description": "Historic photo of the 66th St. Elevated Station at Columbus Avenue. Photo courtesy of the New York Public Library."
+            },
+            {
+              "imageFile": "elevatedStationPhoto2",
+              "fileSizes": {
+                "th": 1,
+                "reg": 1,
+                "lg": 0
+              },
+              "medium": "Photograph",
+              "title": "66th Street Elevated Station, Platform Level",
+              "description": "Historic photo of the 66th St. Elevated Station at Columbus Avenue. Photo courtesy of the New York Public Library."
+            }
+          ]
+        },
+        {
+          "imageFile": "weehawken",
+          "fileSizes": {
+            "th": 1,
+            "reg": 1,
+            "lg": 0
+          },
+          "title": "Weehawken",
+          "medium": "Oil on Canvas",
+          "description": "The Weehawken Steps in Weehawken, NJ.",
+          "relatedPictures": [
+            {
+              "imageFile": "weehawkenPhoto",
+              "fileSizes": {
+                "th": 1,
+                "reg": 1,
+                "lg": 0
+              },
+              "title": "Weehawken Stone Steps",
+              "description": "Circa 1920 postcard of the Stone Steps in Weehawken, New Jersey. The Steps, also known as the Grauert Causeway were built in 1915 to connect the ferry landing to what is now JFK Boulevard. The steps are still in existence, though collapsed in places and overgrown with vegetation.",
+              "medium": "",
+              "th": "1",
+              "reg": "1",
+              "lg": "0"
+            }
+          ]
+        },
+        {
+          "imageFile": "sanGimignano",
+          "fileSizes": {
+            "th": 1,
+            "reg": 1,
+            "lg": 0
+          },
+          "title": "Towers of San Gimignano, Italy",
+          "medium": "Probably Gouache on Illustration Board",
+          "description": "The tower on the left is the Torre Grossa. The one on the right is the Torre Rognosa.",
+          "th": "1",
+          "reg": "1",
+          "lg": "0",
+          "notTheFirstTime": "sanGimignano"
+        }
+      ]
+    },
+    {
+      "title": "Portraits",
+      "pictures": [
+        {
+          "imageFile": "ernestOnTractor",
+          "fileSizes": {
+            "th": 1,
+            "reg": 1,
+            "lg": 0
+          },
+          "title": "Ernest on a Tractor",
+          "medium": "Tempera on Gessoed Panel",
+          "description": "Ernest Roberts was a neighbor who often posed for Peter Helck",
+          "th": "1",
+          "reg": "1",
+          "lg": "0",
+          "relatedPictures": [
+            {
+              "imageFile": "ernestOnTractor_bw",
+              "fileSizes": {
+                "th": 1,
+                "reg": 1,
+                "lg": 0
+              },
+              "title": "Black and White Study for \"Ernest on a Tractor\"",
+              "medium": "",
+              "description": "",
+              "th": "1",
+              "reg": "1",
+              "lg": "0"
+            },
+            {
+              "imageFile": "ernestOnTractor_study",
+              "fileSizes": {
+                "th": 1,
+                "reg": 1,
+                "lg": 0
+              },
+              "title": "Study for \"Ernest on a Tracor\"",
+              "medium": "Tempera on Gessoed Panel",
+              "description": "Handwritten notes about color on the right side.",
+              "th": "1",
+              "reg": "1",
+              "lg": "0"
+            }
+          ]
+        },
+        {
+          "imageFile": "frenchy",
+          "fileSizes": {
+            "th": 1,
+            "reg": 1,
+            "lg": 0
+          },
+          "title": "\"Frenchy\"",
+          "medium": "Oil on Canvas",
+          "description": "Leopold Napoleon Robillard",
+          "th": "1",
+          "reg": "1",
+          "lg": "0"
+        }
+      ]
+    }
+
+  ]
+}
