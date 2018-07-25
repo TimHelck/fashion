@@ -32,51 +32,19 @@ function handleGalleryClick(e) {
 
 function openSlide(target, data) {
 	var expandable = $(target).closest(".cell").find(".expandable")[0];
-console.log("Line 35");
-//console.log(expandable);
-//console.log($(expandable).data('dataaddress'));
-//console.log(data.length);
+//console.log("Line 35");
 	var node = getNode(
 		$(expandable).data('dataaddress'), 
 		data.galleries);
 	console.log(node);
 	var largeImagePath =  './galleryImages/large/' + node.fileName + '.jpg';
 	var displayImagePath =  './galleryImages/display/' + node.fileName + '.jpg';
-	//$($('.imageGrid')[0]).prepend("<div id='1'><canvas></canvas></div>");
 
 	var data = { fileName: node.fileName,
 	             imageDir: './galleryImages/display/',
 				 title:    node.title
 	};
 	slideTray.loadSlide(data);
-//http://localhost:8080/galleryImages/thumbnail/weehawken.jpg
-/*
-			fileName: "frenchy", 
-			imageDir: "../galleryImages/display/",
-			title: "Portrait of Frenchy 1234567890 1234567890"
-
-*/
-	
-/*
-	var ctx = $("div#1 canvas")[0].getContext('2d');
-	var img = new Image();
-	img.onload = function() {
-console.log("Line 48: " + img.width + ' -- ' + img.height);		
-    	//ctx.drawImage(img, 0, 0, img.width, img.height);
-    	ctx.drawImage(img, 40, 0, 876, 633);
-	};
-	img.src = './galleryImages/display/' + node.fileName + '.jpg';
-console.log("Line 51");
-*/
-/*
-	var node = getNode($(this).data('dataaddress'), data.galleries);
-	var relatedImagePath =  './galleryImages/display/' + node.fileName + '.jpg';
-
-	var largeImageExpand = $($('.isExpanded')[0]).find('.expand');
-	var largeImageRelated = largeImageExpand.find('.largeImageRelated');
-	largeImageRelated.attr('src', relatedImagePath);
-	largeImageExpand.addClass('showRelated');
-*/
 
 }
 
@@ -279,10 +247,8 @@ if(document.location.host.match(/localhost/)) {
 
 $.ajax({
 	dataType: "text",
-	//url: "scripts/galleryData.js",
 	url: url,
 	success: function (data) {
-//console.log(data.length);
 		var obj = $.parseJSON(data);
 		CPH.loadGalleries(obj);
 	},
