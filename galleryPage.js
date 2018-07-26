@@ -21,6 +21,7 @@ var responseInfo = {
 	gif:  ['image/gif', 'binary'],
 	png:  ['image/gif', 'binary'],
 	ico:  ['image/gif', 'binary'],
+	svg:  ['image/svg+xml'],
 	css:  ['text/css; charset=utf-8'],
 	js:   ['application/javascript'],
 	json: ['application/json; charset=utf-8'],
