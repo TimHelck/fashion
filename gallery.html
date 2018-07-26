@@ -15,19 +15,32 @@
 </head>
 <body>
 	<div id="masthead">
-		<div>
-			<span class="title">Peter Helck</span>
-			<!--
-			<span class="subTitle">American Artist&nbsp;&nbsp;&nbsp;&nbsp;1893-1988</span>
-			-->
-			<ul class="topMenu">
-				<li><a href="">Home</a></li>
-				<li><a href="">Gallery</a></li>
-				<li><a href="">Memoirs</a></li>
-				<li><a href="">Links</a></li>
-			</ul>
-		
-		</div>
+		<header>
+			<img class="logo" src="./images/nyt-logo-white-170x24.svg" alt="The New York Times" />
+			<span class="title">Fashion</span>
+			<form class="search">
+				<label for="designer">Designer</label>
+				<select name="designer" id="designer" multiple>
+					<option value="anna_sui">Anna Sui</option>
+					<option value="d_n_g">D&G</option>
+					<option value="chanel">Chanel</option>
+				</select>
+				<label for="year">Year</label>
+				<select name="year" id="year" multiple>
+					<option value="2018">2018</option>
+					<option value="2017">2017</option>
+					<option value="2016">2016</option>
+				</select>
+				<label for="season">Season</label>
+				<select name="season" id="season" multiple>
+					<option value="spring">Spring</option>
+					<option value="summer">Summer</option>
+					<option value="fall">Fall</option>
+					<option value="winter">Winter</option>
+				</select>
+				<button type="submit">Run</button>
+			</form>
+		</header>
 	</div>
 	<div id="shell">
 

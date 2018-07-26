@@ -11,13 +11,13 @@ https://css-tricks.com/all-about-floats/
 /* *************************************************************************** */
 
 body {
-	background-color: #112411; 
-	color: linen;
-	padding:10px;
+	background-color: #121212;
+	color: #fff;
+	padding: 70px 10px 10px;
 }
-A:link {color: #afdcaf;}
-A:visited {color: #90a0b0;}
-A:active {color: khaki;}
+a:link {color: #afdcaf;}
+a:visited {color: #90a0b0;}
+a:active {color: khaki;}
 
 body.picture {background-color: #222222; color: khaki;}
 
@@ -25,12 +25,30 @@ html {
   box-sizing: border-box;
 }
 
-#shell {
-	displayXXX: flex;
-	flex-directionXXX: column; 
-
+#masthead {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 59px;
+	background: #000;
+	padding: 15px 10px 10px;
+	border-bottom: 1px solid #333;
+	z-index: 10;
 }
 
+/*** Search ***/
+.search {
+	float: right;
+}
+
+.search select[multiple] {
+	height: 30px;
+}
+
+.search label, .search button {
+	vertical-align: top;
+}
 #slideTray {
 	width:60%;
 	height:500px;
@@ -68,7 +86,7 @@ html {
 }
 
 #slideTray > .titleBar {
-	background-color: #446655;
+	background-color: #222;
 	height:30px;
 	top:0px;
 	position:relative;
@@ -76,7 +94,7 @@ html {
 
 #slideTray > .container {
 
-	background-color: rgba(136,153,119,0.75);
+	background-color: rgba(0,0,0,0.8);
 	top:0;
 	bottomX:20px;
 	height:100%;
@@ -117,7 +135,8 @@ html {
 	padding: .2em 1em;
 	color: linen;
 	display: inline-block;
-	background-color: darkseagreen;
+	/*background-color: darkseagreen;*/
+	border-bottom: 1px solid hsla(0,0%,100%,.1);
 	font-family:helvetica; 
 }
 
@@ -210,17 +229,15 @@ div.related {
 }
 
 #galleries .imageGrid {
-	background-color: #224433;
+	border-bottom: 1px solid hsla(0,0%,100%,.1);
 }
 
 #galleries .imageGrid .title {
 	position: relative;
-	font-weight:bold; 
-	font-family:helvetica; 
 	letter-spacing:.1em;
 	display: block;
-  	text-align: center;
-	background-color: #446655;
+	text-align: center;
+	border-bottom: 1px solid hsla(0,0%,100%,.1);
 }
 #galleries .imageGrid .leftColumnRelated .restoreMainPicture {
   	text-align: center;
@@ -262,12 +279,11 @@ div.related {
 	position: relative;
 	font-family:helvetica; 
 	display: block;
-  	text-align: center;
-	background-color: darkseagreen;
+	text-align: center;
 }
 
 #galleries .imageGrid .imageGrid{
-	background-color: #446655;
+	background-color: #191919;
 }
 
 #galleries .imageGrid .imageGrid .imageGrid{
@@ -339,7 +355,6 @@ div.related {
   padding: 0;
   box-sizing: content-box;
   overflow: hidden;
-  background: #112411;
   max-height: 0;
   transition: max-height .3s ease-in-out,
               margin-bottom .1s .2s;
@@ -586,7 +601,13 @@ div.related {
 
 
 #masthead > div { float: left; margin-bottom:10px; }
-#masthead .title {font-size: 55px; color:darkseagreen; display:inline-block; width:300px; }
+#masthead .title {
+	font-size: 20px;
+	display:inline-block;
+	width:300px;
+	font-family: nyt-cheltenham,georgia,'times new roman',times,serif;
+	vertical-align: top;
+}
 #mastheadXXX .subTitle {font-size: 35px; color:darkseagreen; margin-left:50px;}
 
 .topMenu {
@@ -658,8 +679,9 @@ div.related {
 #galleries .imageGridX {
 	max-width: 1310px;
 	max-widthX: 664px;
-	background-colorXXX: #FF8888;
-	background-color: #224433;
+	/*background-colorXXX: #FF8888;*/
+	/*background-color: #224433;*/
+	border-bottom: 1px solid hsla(0,0%,100%,.1);
 }
 
 .imageGrid {
@@ -668,7 +690,8 @@ div.related {
 
 #galleries .imageGrid {
 	max-width: 1310px;
-	background-color: #224433;
+	/*background-color: #224433;*/
+	border-bottom: 1px solid hsla(0,0%,100%,.1);
 }
 
 #galleries .imageGrid > .title {
@@ -741,7 +764,7 @@ div.related {
 
 #galleries .imageGrid .galleryDescription .multiLine .blockQuote {
 	margin: -10px 30px;
-	color: #335544;
+	color: #aaa;
 }
 
 .quote, .blockQuote, i{
