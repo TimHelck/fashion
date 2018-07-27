@@ -5,7 +5,7 @@ CPH.loadGalleries = function(data) {
 function renderGalleries(d) {
 	var r = '';
 	$.each(d.galleries , function(i, g){
-console.log("Line 8: " + g.title + " -- " + g.description);
+//console.log("Line 8: " + g.title + " -- " + g.description);
 		r += renderGallery(1,  i, g.title, g.description,   g.pictures);
 		
 	});
@@ -17,6 +17,7 @@ console.log("Line 8: " + g.title + " -- " + g.description);
 
 function handleGalleryClick(e) {
 	var data = e.data.d;
+//console.log("Line 20: " + JSON.stringify(data, undefined, 4));
 	var target = e.target;
 	if(target.className === "openSlide") {
 		openSlide(target, data);
@@ -24,8 +25,9 @@ function handleGalleryClick(e) {
 }
 
 function openSlide(target, data) {
+//console.log(target);
 	var expandable = $(target).closest(".cell").find(".expandable")[0];
-console.log("Line 35");
+//console.log("Line 35");
 	var node = getNode(
 		$(expandable).data('dataaddress'), 
 		data.galleries);
@@ -35,7 +37,7 @@ console.log("Line 35");
 	//var displayImagePath =  './galleryImages/display/' + node.fileName + '.jpg';
 	var largeImagePath =    './galleryImages/' + imageFileParts[0] + '/large/'   + imageFileParts[1];
 	var displayImagePath =  './galleryImages/' + imageFileParts[0] + '/display/' + imageFileParts[1];
-console.log("Line 45: " + largeImagePath + ' -- ' + displayImagePath);
+//console.log("Line 45: " + largeImagePath + ' -- ' + displayImagePath);
 //c +=	"<img class='basicImg' src='./galleryImages/" + imageFileParts[0] + '/thumbnail/' + imageFileParts[1] + "'>";
 	var data = { fileName: displayImagePath,
 				 title:    node.title
@@ -124,8 +126,10 @@ function renderRelatedPictures(d, key) {
 	}	
 	var c = '';
 	jQuery.each(d, function(i, x) {
+		var imageFileParts = x.imageFile.split('/');
 		c +=	"		<div class='related' data-dataaddress='" + key + ":" + i + "'>";
-		c +=	"			<img class='basicImg' src='./galleryImages/thumbnail/" + x.imageFile + ".jpg'>";
+		//c +=	"			<img class='basicImg' src='./galleryImages/thumbnail/" + x.imageFile + ".jpg'>";
+		c +=	"			<img class='basicImg' src='./galleryImages/" + imageFileParts[0] + '/thumbnail/' + imageFileParts[1] + "'>";
 		c +=	"			<div class='title'>" + (x.title || "") + "</div>";
 		c +=	"		</div>";
 	});
@@ -160,8 +164,12 @@ $cell.find('.expandClose').click(function() {
 });
 
 function showRelatedImage() {
+
 	var node = getNode($(this).data('dataaddress'), data.galleries);
-	var relatedImagePath =  './galleryImages/display/' + node.fileName + '.jpg';
+	var imageFileParts = node.fileName.split('/');
+	//var relatedImagePath =  './galleryImages/display/' + node.fileName + '.jpg';
+	var relatedImagePath =  './galleryImages/' + imageFileParts[0] + '/display/' + imageFileParts[1];
+	//c +=	"			<img class='basicImg' src='./galleryImages/" + imageFileParts[0] + '/thumbnail/' + imageFileParts[1] + "'>";
 
 	var largeImageExpand = $($('.isExpanded')[0]).find('.expand');
 	var largeImageRelated = largeImageExpand.find('.largeImageRelated');
