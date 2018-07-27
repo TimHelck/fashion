@@ -7,7 +7,21 @@
 			"pictures": [
 				{
 					"imageFile": "annasui-spring-2018/0YP7.jpg",
-					"title": "0YP7"
+					"title": "0YP7",
+		            "relatedPictures": [
+						{
+						  "imageFile": "annasui-spring-2018/0YP7_cape_f.jpg",
+						  "title": "Gathering of the Tribes Embroidered Jacquard Cape -- Front"
+						},
+						{
+						  "imageFile": "annasui-spring-2018/0YP7_cape_b.jpg",
+						  "title": "Gathering of the Tribes Embroidered Jacquard Cape -- Back"
+						},
+						{
+						  "imageFile": "annasui-spring-2018/0YP7_dress.jpg",
+						  "title": "Curtain of Stars Metallic Jacquard Dress"
+						}
+					  ]
 				},
 				{
 					"imageFile": "annasui-spring-2018/1693.jpg",
