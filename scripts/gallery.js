@@ -26,10 +26,17 @@ function handleGalleryClick(e) {
 
 function openSlide(target, data) {
 //console.log(target);
+	var dataaddress;
+	var expanded = $(target).closest(".expand")[0];
 	var expandable = $(target).closest(".cell").find(".expandable")[0];
+	if ($(expanded).hasClass('showRelated')) {
+		dataaddress = $(expanded).find('.largeImageRelated').data('dataaddress');
+	} else {
+		dataaddress = $(expandable).data('dataaddress');
+	}
 //console.log("Line 35");
 	var node = getNode(
-		$(expandable).data('dataaddress'), 
+		dataaddress,
 		data.galleries);
 	console.log(node);
 	var imageFileParts = node.fileName.split('/');
@@ -174,6 +181,7 @@ function showRelatedImage() {
 	var largeImageExpand = $($('.isExpanded')[0]).find('.expand');
 	var largeImageRelated = largeImageExpand.find('.largeImageRelated');
 	largeImageRelated.attr('src', relatedImagePath);
+	largeImageRelated.data('dataaddress', $(this).data('dataaddress'));
 	largeImageExpand.addClass('showRelated');
 
 
@@ -184,10 +192,11 @@ function showRelatedImageDescription() {
 	var mainPictureDataAddress = dataAddress.split(':').slice(0,-1).join(':');
 	var node     = getNode(dataAddress, data.galleries);
 	var mainNode = getNode(mainPictureDataAddress, data.galleries);
+	var mainImageFileParts = mainNode.fileName.split('/');
 	var r = "";
 
 	r +=	"		<div class='related restoreMainPicture' data-dataaddress='" + mainPictureDataAddress + "'>";
-	r +=	"			<img class='basicImg' src='./galleryImages/thumbnail/" + mainNode.fileName + ".jpg'>";
+	r +=	"			<img class='basicImg' src='./galleryImages/" + mainImageFileParts[0] + "/thumbnail/" + mainImageFileParts[1] + "'>";
 	r +=	"			<div class='subTitle'>Return to main picture</div>";
 	r +=	"		</div>";
 		
