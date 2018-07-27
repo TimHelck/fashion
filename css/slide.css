@@ -8,13 +8,12 @@ div.slide {
 	width:100%;
 	height:44px;
 	padding:4px;
-	background-color:#224433;
-	border-bottom:solid 1px red;
+	background-color: #121212;
+	border: solid 1px #555;
 	position:relative;
 	flex-direction: row;
 	justify-content: flex-start;
 	font-size:12px;
-	font-family:helvetica;
 }
 
 .slide .titleBar .title {
@@ -26,7 +25,7 @@ div.slide {
 }
 
 .slide .titleBar .button { 
-	background-color: rgba(068, 136, 102, 0.8); 
+	background-color: #333;
 	margin-top:10px; 
 }
 
@@ -42,19 +41,16 @@ div.slide {
 	margin-top:-4px;
 	margin-right:1px;
 	margin-left: auto;
-	background-colorX:pink;
 }
 
 .slide .titleBar .button { 
 	height: 16px;
 	width: 25px;
 	display: inline-block;
-	font-size: 10px;
 	cursor: default;
 	margin-left: 1px;
 	font-size: 12px;
-	padding: 4px;
-
+	line-height: 19px;
 }
 .slide .titleBar .button div { 
     margin: 5px auto;
@@ -88,7 +84,6 @@ div.slide {
 	cursor: url(../images/slide/redMoveCursor.png),url(../images/slide/redMoveCursor.png),default;
 
 	/* initial values */
-	widthX: 576px;
 	width: 288px;
 	border:none;
 }

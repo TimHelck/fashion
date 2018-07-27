@@ -12,13 +12,6 @@ function renderGalleries(d) {
 
 	$('#galleries').html(r);
 	
-	// set sub-gallery link overlay height to match the image
-	$.each($(".subGalleryLinkContainer"), function(i, x) {
-		var topAndBottomPadding = 10;
-		var h = $(x).find(".basicImg").height();
-		$(x).find(".galleryTitle").height(h - topAndBottomPadding);
-	});
-
 	$("#galleries .openSlide").on("click", {d:d}, handleGalleryClick);
 }
 
