@@ -32,14 +32,18 @@ function handleGalleryClick(e) {
 
 function openSlide(target, data) {
 	var expandable = $(target).closest(".cell").find(".expandable")[0];
-//console.log("Line 35");
+console.log("Line 35");
 	var node = getNode(
 		$(expandable).data('dataaddress'), 
 		data.galleries);
 	console.log(node);
-	var largeImagePath =  './galleryImages/large/' + node.fileName + '.jpg';
-	var displayImagePath =  './galleryImages/display/' + node.fileName + '.jpg';
-
+	var imageFileParts = node.fileName.split('/');
+	//var largeImagePath =  './galleryImages/large/' + node.fileName + '.jpg';
+	//var displayImagePath =  './galleryImages/display/' + node.fileName + '.jpg';
+	var largeImagePath =    './galleryImages/' + imageFileParts[0] + '/large/'   + imageFileParts[1];
+	var displayImagePath =  './galleryImages/' + imageFileParts[0] + '/display/' + imageFileParts[1];
+console.log("Line 45: " + largeImagePath + ' -- ' + displayImagePath);
+//c +=	"<img class='basicImg' src='./galleryImages/" + imageFileParts[0] + '/thumbnail/' + imageFileParts[1] + "'>";
 	var data = { fileName: node.fileName,
 	             imageDir: './galleryImages/display/',
 				 title:    node.title
