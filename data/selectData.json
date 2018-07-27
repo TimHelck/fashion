@@ -22,7 +22,7 @@
         }
     },
     "events": {
-        "metgala-2018": "Met Gala 2018",
-        "metgala-2017": "Met Gala 2017"
+        "metGala-2018": "Met Gala 2018",
+        "metGala-2017": "Met Gala 2017"
     }
 }

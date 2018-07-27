@@ -41,6 +41,7 @@ var galleryFiles = [
 	"annasui-spring-2018",
 	"metGala-2017",
 	"metGala-2018",
+	"versace-fall-2017",
 	"versace-spring-2018"
 ];
 
@@ -75,7 +76,8 @@ http://127.0.0.1:8006/data/pictureData.json?q=annasui-spring-2018,amcqueen-sprin
 */
 
 	if( fileName === 'pictureData.json' && qs) {
-		var galleries = {};
+		var galleries;
+		var designerImages = {};
 		var searchTerms = getSearchTermsFromQueryString(qs);
 		searchTerms.forEach(function(searchTerm){
 			if(galleryFiles.indexOf(searchTerm) !== -1) {
@@ -87,18 +89,18 @@ http://127.0.0.1:8006/data/pictureData.json?q=annasui-spring-2018,amcqueen-sprin
 				[designer, season, year] = searchTerm.split('-');
 				collection = season + '-' + year;
 				collectionName = season[0].toUpperCase() + season.substr(1) + ' ' + year;
-				if(!galleries[designer]) {
-					galleries[designer] = {}
-					galleries[designer].title = designerNames[designer];
-					galleries[designer].pictures = [];
+				if(!designerImages[designer]) {
+					designerImages[designer] = {};
+					designerImages[designer].title = designerNames[designer];
+					designerImages[designer].pictures = [];
 				}
-				galleries[designer].pictures.push(dataObj.pictures[0]);
-
+				designerImages[designer].pictures.push(dataObj.pictures[0]);
 			}
 			
 		});
+		galleries = Object.values(designerImages);
 		res.writeHead(200, {'Content-Type': responseInfo[ext][0]});
-		res.end(JSON.stringify(galleries, undefined, 4), responseInfo[ext][1]);
+		res.end(JSON.stringify({"galleries": galleries}, undefined, 4), responseInfo[ext][1]);
 
 	}
 

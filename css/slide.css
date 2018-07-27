@@ -80,11 +80,10 @@ div.slide {
 }
 
 .slide .outerFrame {
-    position: relative;
+	position: relative;
 	cursor: url(../images/slide/redMoveCursor.png),url(../images/slide/redMoveCursor.png),default;
 
 	/* initial values */
-	width: 288px;
 	border:none;
 }
 

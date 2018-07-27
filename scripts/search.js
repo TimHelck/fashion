@@ -65,16 +65,18 @@
         }
         console.log(query);
 
-        url += '?q=' + query.join(',');
+        if (query.length > 0 ) {
+            url += '?q=' + query.join(',');
 
-        $.ajax({
-            dataType: "text",
-            url: url,
-            success: function (data) {
-                var obj = $.parseJSON(data);
-                window.CPH.loadGalleries(obj);
-            }
-        });
+            $.ajax({
+                dataType: "text",
+                url: url,
+                success: function (data) {
+                    var obj = $.parseJSON(data);
+                    window.CPH.loadGalleries(obj);
+                }
+            });
+        }
     };
 
     var getSelectData = function() {

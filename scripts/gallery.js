@@ -37,8 +37,7 @@ console.log("Line 35");
 	var displayImagePath =  './galleryImages/' + imageFileParts[0] + '/display/' + imageFileParts[1];
 console.log("Line 45: " + largeImagePath + ' -- ' + displayImagePath);
 //c +=	"<img class='basicImg' src='./galleryImages/" + imageFileParts[0] + '/thumbnail/' + imageFileParts[1] + "'>";
-	var data = { fileName: node.fileName,
-	             imageDir: './galleryImages/display/',
+	var data = { fileName: displayImagePath,
 				 title:    node.title
 	};
 	slideTray.loadSlide(data);
