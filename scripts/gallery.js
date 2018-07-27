@@ -12,13 +12,6 @@ console.log("Line 8: " + g.title + " -- " + g.description);
 
 	$('#galleries').html(r);
 	
-	// set sub-gallery link overlay height to match the image
-	$.each($(".subGalleryLinkContainer"), function(i, x) {
-		var topAndBottomPadding = 10;
-		var h = $(x).find(".basicImg").height();
-		$(x).find(".galleryTitle").height(h - topAndBottomPadding);
-	});
-
 	$("#galleries .openSlide").on("click", {d:d}, handleGalleryClick);
 }
 
@@ -44,8 +37,7 @@ console.log("Line 35");
 	var displayImagePath =  './galleryImages/' + imageFileParts[0] + '/display/' + imageFileParts[1];
 console.log("Line 45: " + largeImagePath + ' -- ' + displayImagePath);
 //c +=	"<img class='basicImg' src='./galleryImages/" + imageFileParts[0] + '/thumbnail/' + imageFileParts[1] + "'>";
-	var data = { fileName: node.fileName,
-	             imageDir: './galleryImages/display/',
+	var data = { fileName: displayImagePath,
 				 title:    node.title
 	};
 	slideTray.loadSlide(data);

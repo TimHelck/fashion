@@ -8,7 +8,7 @@ var  Slide = function(pictureData, slideTray) {
 	$.extend(this, pictureData);
 	this.scaleFactor = .5;
 	this.moveCounter = 0;
-	this.imageSrc = pictureData.imageDir + pictureData.fileName + ".jpg";
+	this.imageSrc = pictureData.fileName;
 	this.element = $('<div class="slide"></div>');
 	var that = this;
 	setTimeout(function() { 
