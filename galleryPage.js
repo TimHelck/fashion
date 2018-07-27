@@ -66,7 +66,7 @@ function serveFile(req, res) {
 	fileName = url.split('/').slice(-1)[0]
 	var ext = url.split('.').slice(-1)[0];
 
-
+//console.log("Line 69: " + fileName);
 
 /* 
 use this and similar to test
@@ -74,7 +74,7 @@ http://127.0.0.1:8006/data/pictureData.json?q=annasui-spring-2018,amcqueen-sprin
 
 */
 
-	if( fileName === 'pictureData.json') {
+	if( fileName === 'pictureData.json' && qs) {
 		var galleries = {};
 		var searchTerms = getSearchTermsFromQueryString(qs);
 		searchTerms.forEach(function(searchTerm){
@@ -103,6 +103,7 @@ http://127.0.0.1:8006/data/pictureData.json?q=annasui-spring-2018,amcqueen-sprin
 	}
 
 	else if(responseInfo[ext]) {
+		if (fileName === 'favicon.ico') { fileName === 'images/favicon.ico'; }
 		fs.readFile("./" + url, function(err, data){
 			if (err) {
 				console.log(err);

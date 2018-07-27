@@ -5,7 +5,7 @@ CPH.loadGalleries = function(data) {
 function renderGalleries(d) {
 	var r = '';
 	$.each(d.galleries , function(i, g){
-//console.log("Line 8: " + g.title + " -- " + g.description);
+console.log("Line 8: " + g.title + " -- " + g.description);
 		r += renderGallery(1,  i, g.title, g.description,   g.pictures);
 		
 	});
@@ -50,21 +50,25 @@ function openSlide(target, data) {
 
 
 function renderGallery(level, key, galleryName, description, d) {
-//console.log("Line 84: " + galleryName + " -- " + description);
+//console.log("Line 53: " + galleryName + " -- " + description);
 	var r = "<section class='imageGrid'><div class='title'>" + galleryName + "</div>";
 	if(description) {
 		r += "<div class='galleryDescription'>" + description + "</div>";
 	}
 	r += "<div>";
+//console.log("Line 59: " + r);
 	var c;
 	if(level > 3) { return; }
 	jQuery.each(d, function(i, x) {
+//console.log("Line 63: " + x.imageFile);
+		var imageFileParts = x.imageFile.split('/');
 		if(x.pictures) { 
 //console.log("Line 93: " + x.galleryName + " -- " + x.description);
 			c  =	"	<div class='cell isCollapsed'>";
 			c +=	"		<div class='expandable' data-dataaddress='" + key + ":" + i + "'>";
 			c +=	"			<div class='subGalleryLinkContainer'>";
-			c +=	"				<img class='basicImg' src='./galleryImages/thumbnail/" + x.imageFile + ".jpg'>";
+			//c +=	"				<img class='basicImg' src='./galleryImages/thumbnail/" + x.imageFile + ".jpg'>";
+			c +=	"				<img class='basicImg' src='./galleryImages/" + imageFileParts[0] + '/thumbnail/' + imageFileParts[1] + "'>";
 			c +=	"				<div class='galleryTitle'>" + x.title + "</div>";
 			c +=	"			</div>";
 			c +=	"			<div class='arrowUp'></div>";
@@ -78,7 +82,8 @@ function renderGallery(level, key, galleryName, description, d) {
 //console.log("Line 110: " + x.galleryName + " -- " + x.description);
 			c  =	"	<div class='cell isCollapsed'>";
 			c +=	"		<div class='expandable' data-dataaddress='" + key + ":" + i + "'>";
-			c +=	"			<img class='basicImg' src='./galleryImages/thumbnail/" + x.imageFile + ".jpg'>";
+			//c +=	"			<img class='basicImg' src='./galleryImages/thumbnail/" + x.imageFile + ".jpg'>";
+			c +=	"			<img class='basicImg' src='./galleryImages/" + imageFileParts[0] + '/thumbnail/' + imageFileParts[1] + "'>";
 			c +=	"			<div class='arrowUp'></div>";
 			c +=	"		</div>";
 			c +=	"		<div class='expand'>";
@@ -86,7 +91,8 @@ function renderGallery(level, key, galleryName, description, d) {
 			c += renderPictureDescription(x);
 			c +=    "			</div>";
 			c +=    "			<div class='leftColumnRelated'></div>";
-			c +=	"			<img class='largeImageMain' src='./galleryImages/display/" + x.imageFile + ".jpg'>";
+			//c +=	"			<img class='largeImageMain' src='./galleryImages/display/" + x.imageFile + ".jpg'>";
+			c +=	"			<img class='largeImageMain' src='./galleryImages/" + imageFileParts[0] + '/display/' + imageFileParts[1] + "'>";
 			c +=	"			<img class='largeImageRelated' src=''>";
 			c +=    "			<div class='rightColumn'>";
 			c +=    "				<div class='buttons'>";
