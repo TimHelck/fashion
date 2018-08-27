@@ -5,7 +5,7 @@ slideTray.element = $("#slideTray");
 slideTray.container = $(slideTray.element[0]).find(".container");
 
 slideTray.openSlides = [];
-slideTray.openSlides.leftIncrement  = 100;
+slideTray.openSlides.leftIncrement  = 305;
 slideTray.openSlides.topIncrement   = 200;
 slideTray.openSlides.startPosL      = 5 - slideTray.openSlides.leftIncrement;
 slideTray.openSlides.startPosT      = 5;
@@ -62,8 +62,17 @@ slideTray.returnHome = function() {
 }
 
 slideTray.setButtonListeners = function() {
+	
 	$("#slideTray .titleBar .btn.close").on('click',     
-		(function() { 
+		(function() {
+			var deleteList = [];
+			$.each(slideTray.openSlides, function(key, value) {
+				deleteList.push(value);
+			});			
+			$.each(deleteList, function(i, slide) {
+				slideTray.deleteSlide(slide);
+	
+			});
 			$(this.element[0]).addClass('hidden');
 		}).bind(this)
 	);
